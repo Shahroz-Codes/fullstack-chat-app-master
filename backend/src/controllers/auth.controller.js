@@ -32,6 +32,8 @@ export const signup = async (req, res) => {
       generateToken(newUser._id, res);
       await newUser.save();
 
+      console.log(`✨ ${newUser.fullName} registered`);
+
       res.status(201).json({
         _id: newUser._id,
         fullName: newUser.fullName,
@@ -63,6 +65,8 @@ export const login = async (req, res) => {
 
     generateToken(user._id, res);
 
+    console.log(`🚪 ${user.fullName} logged in`);
+
     res.status(200).json({
       _id: user._id,
       fullName: user.fullName,
@@ -77,12 +81,17 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
   try {
+    const userName = req.user ? req.user.fullName : 'Unknown User';
+
     res.cookie("jwt", "", {
       maxAge: 0,
       httpOnly: true,
       sameSite: "lax",
       secure: false
     });
+
+    console.log(`👋 ${userName} logged out`);
+
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
     console.log("Error in logout controller", error.message);
