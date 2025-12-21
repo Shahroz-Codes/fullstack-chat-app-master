@@ -1,0 +1,161 @@
+<svg viewBox="0 0 1200 950" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="max-width: 1200px; max-height: 950px; overflow: auto;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2d3748" />
+    </marker>
+    <marker id="arrowheadRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e53e3e" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="40" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a365d">Feature 3: WebSocket Real-Time Protocol</text>
+
+  <!-- Legend -->
+  <rect x="50" y="70" width="1100" height="50" fill="#f0f4f8" stroke="#cbd5e0" stroke-width="2" rx="5"/>
+  <text x="70" y="105" font-size="12" fill="#2d3748">HTTP vs WebSocket → Handshake Process → TCP Connection → Real-Time Events</text>
+
+  <!-- HTTP vs WebSocket Comparison -->
+  <text x="200" y="150" font-size="16" font-weight="bold" fill="#1a365d">HTTP vs WebSocket</text>
+
+  <!-- HTTP Column -->
+  <rect x="100" y="170" width="180" height="120" fill="#fed7d7" stroke="#c53030" stroke-width="2" rx="5"/>
+  <text x="190" y="195" font-size="14" text-anchor="middle" fill="#c53030" font-weight="bold">HTTP Protocol</text>
+  <text x="190" y="215" font-size="11" text-anchor="middle" fill="#c53030">• Request-Response</text>
+  <text x="190" y="235" font-size="11" text-anchor="middle" fill="#c53030">• Client initiates only</text>
+  <text x="190" y="255" font-size="11" text-anchor="middle" fill="#c53030">• Stateless</text>
+  <text x="190" y="275" font-size="11" text-anchor="middle" fill="#c53030">• High latency</text>
+
+  <!-- WebSocket Column -->
+  <rect x="300" y="170" width="180" height="120" fill="#c6f6d5" stroke="#22543d" stroke-width="2" rx="5"/>
+  <text x="390" y="195" font-size="14" text-anchor="middle" fill="#22543d" font-weight="bold">WebSocket Protocol</text>
+  <text x="390" y="215" font-size="11" text-anchor="middle" fill="#22543d">• Bidirectional</text>
+  <text x="390" y="235" font-size="11" text-anchor="middle" fill="#22543d">• Persistent connection</text>
+  <text x="390" y="255" font-size="11" text-anchor="middle" fill="#22543d">• Full-duplex</text>
+  <text x="390" y="275" font-size="11" text-anchor="middle" fill="#22543d">• Low latency</text>
+
+  <!-- WebSocket Handshake Process -->
+  <text x="600" y="150" font-size="16" font-weight="bold" fill="#1a365d">WebSocket Handshake</text>
+
+  <!-- Client -->
+  <rect x="550" y="170" width="120" height="50" fill="#4299e1" stroke="#2b6cb0" stroke-width="2" rx="5"/>
+  <text x="610" y="195" font-size="12" text-anchor="middle" fill="white" font-weight="bold">Client</text>
+
+  <!-- Server -->
+  <rect x="720" y="170" width="120" height="50" fill="#ed8936" stroke="#7c2d12" stroke-width="2" rx="5"/>
+  <text x="780" y="195" font-size="12" text-anchor="middle" fill="white" font-weight="bold">Server</text>
+
+  <!-- Handshake Steps -->
+  <!-- Step 1: Client Request -->
+  <line x1="670" y1="195" x2="720" y2="195" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="680" y="175" width="30" height="20" fill="#e6fffa" stroke="#0f766e" stroke-width="1" rx="3"/>
+  <text x="695" y="190" font-size="9" text-anchor="middle" fill="#0f766e" font-weight="bold">1</text>
+
+  <!-- Step 2: Server Response -->
+  <line x1="720" y1="215" x2="670" y2="215" stroke="#e53e3e" stroke-width="3" marker-end="url(#arrowheadRed)"/>
+  <rect x="680" y="195" width="30" height="20" fill="#fed7d7" stroke="#c53030" stroke-width="1" rx="3"/>
+  <text x="695" y="210" font-size="9" text-anchor="middle" fill="#c53030" font-weight="bold">2</text>
+
+  <!-- TCP Connection Establishment -->
+  <text x="200" y="330" font-size="16" font-weight="bold" fill="#1a365d">TCP Connection Lifecycle</text>
+
+  <!-- Connection States -->
+  <circle cx="150" cy="360" r="25" fill="#e6fffa" stroke="#0f766e" stroke-width="2"/>
+  <text x="150" y="367" font-size="10" text-anchor="middle" fill="#0f766e" font-weight="bold">CLOSED</text>
+
+  <circle cx="250" cy="360" r="25" fill="#fef3c7" stroke="#92400e" stroke-width="2"/>
+  <text x="250" y="367" font-size="10" text-anchor="middle" fill="#92400e" font-weight="bold">SYN</text>
+
+  <circle cx="350" cy="360" r="25" fill="#fae8ff" stroke="#581c87" stroke-width="2"/>
+  <text x="350" y="367" font-size="10" text-anchor="middle" fill="#581c87" font-weight="bold">SYN-ACK</text>
+
+  <circle cx="450" cy="360" r="25" fill="#bee3f8" stroke="#2c5282" stroke-width="2"/>
+  <text x="450" y="367" font-size="10" text-anchor="middle" fill="#2c5282" font-weight="bold">ACK</text>
+
+  <circle cx="550" cy="360" r="25" fill="#c6f6d5" stroke="#22543d" stroke-width="2"/>
+  <text x="550" y="367" font-size="10" text-anchor="middle" fill="#22543d" font-weight="bold">ESTABLISHED</text>
+
+  <!-- Arrows between states -->
+  <line x1="175" y1="360" x2="225" y2="360" stroke="#2d3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="275" y1="360" x2="325" y2="360" stroke="#2d3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="375" y1="360" x2="425" y2="360" stroke="#2d3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="360" x2="525" y2="360" stroke="#2d3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- WebSocket Events -->
+  <text x="750" y="330" font-size="16" font-weight="bold" fill="#1a365d">WebSocket Events</text>
+
+  <!-- Event Examples -->
+  <rect x="700" y="350" width="150" height="30" fill="#e6fffa" stroke="#0f766e" stroke-width="2" rx="3"/>
+  <text x="775" y="370" font-size="11" text-anchor="middle" fill="#0f766e" font-weight="bold">connection</text>
+
+  <rect x="700" y="390" width="150" height="30" fill="#fef3c7" stroke="#92400e" stroke-width="2" rx="3"/>
+  <text x="775" y="410" font-size="11" text-anchor="middle" fill="#92400e" font-weight="bold">newMessage</text>
+
+  <rect x="700" y="430" width="150" height="30" fill="#fae8ff" stroke="#581c87" stroke-width="2" rx="3"/>
+  <text x="775" y="450" font-size="11" text-anchor="middle" fill="#581c87" font-weight="bold">disconnect</text>
+
+  <!-- Real-Time Communication Flow -->
+  <text x="200" y="500" font-size="16" font-weight="bold" fill="#1a365d">Real-Time Message Flow</text>
+
+  <!-- Client 1 -->
+  <rect x="100" y="520" width="120" height="50" fill="#4299e1" stroke="#2b6cb0" stroke-width="2" rx="5"/>
+  <text x="160" y="545" font-size="12" text-anchor="middle" fill="white" font-weight="bold">User A</text>
+
+  <!-- Server -->
+  <rect x="300" y="520" width="120" height="50" fill="#ed8936" stroke="#7c2d12" stroke-width="2" rx="5"/>
+  <text x="360" y="545" font-size="12" text-anchor="middle" fill="white" font-weight="bold">Server</text>
+
+  <!-- Client 2 -->
+  <rect x="500" y="520" width="120" height="50" fill="#48bb78" stroke="#22543d" stroke-width="2" rx="5"/>
+  <text x="560" y="545" font-size="12" text-anchor="middle" fill="white" font-weight="bold">User B</text>
+
+  <!-- Message Flow -->
+  <!-- User A sends message -->
+  <line x1="220" y1="545" x2="300" y2="545" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="240" y="525" width="50" height="20" fill="#e6fffa" stroke="#0f766e" stroke-width="1" rx="3"/>
+  <text x="265" y="540" font-size="9" text-anchor="middle" fill="#0f766e" font-weight="bold">Send</text>
+
+  <!-- Server broadcasts -->
+  <line x1="420" y1="545" x2="500" y2="545" stroke="#e53e3e" stroke-width="3" marker-end="url(#arrowheadRed)"/>
+  <rect x="440" y="525" width="50" height="20" fill="#fed7d7" stroke="#c53030" stroke-width="1" rx="3"/>
+  <text x="465" y="540" font-size="9" text-anchor="middle" fill="#c53030" font-weight="bold">Broadcast</text>
+
+  <!-- WebSocket Protocol Details -->
+  <rect x="50" y="600" width="1100" height="250" fill="#f7fafc" stroke="#2d3748" stroke-width="2" rx="5"/>
+  <text x="70" y="625" font-size="16" font-weight="bold" fill="#1a365d">🔌 WebSocket Protocol Implementation</text>
+
+  <text x="90" y="655" font-size="13" fill="#2d3748" font-weight="bold">Handshake Process:</text>
+  <text x="110" y="675" font-size="12" fill="#2d3748">1. Client sends HTTP GET with "Upgrade: websocket" header</text>
+  <text x="110" y="695" font-size="12" fill="#2d3748">2. Server responds with 101 Switching Protocols</text>
+  <text x="110" y="715" font-size="12" fill="#2d3748">3. TCP connection remains open for bidirectional communication</text>
+
+  <text x="90" y="740" font-size="13" fill="#2d3748" font-weight="bold">Message Framing:</text>
+  <text x="110" y="760" font-size="12" fill="#2d3748">• Binary framing protocol over TCP</text>
+  <text x="110" y="780" font-size="12" fill="#2d3748">• Support for text and binary messages</text>
+  <text x="110" y="800" font-size="12" fill="#2d3748">• Automatic ping/pong for connection health</text>
+
+  <text x="600" y="655" font-size="13" fill="#2d3748" font-weight="bold">Socket.io Features:</text>
+  <text x="620" y="675" font-size="12" fill="#2d3748">• Automatic reconnection on network failures</text>
+  <text x="620" y="695" font-size="12" fill="#2d3748">• Fallback to HTTP polling for older browsers</text>
+  <text x="620" y="715" font-size="12" fill="#2d3748">• Room-based message broadcasting</text>
+  <text x="620" y="735" font-size="12" fill="#2d3748">• Connection state management</text>
+
+  <text x="600" y="760" font-size="13" fill="#2d3748" font-weight="bold">Real-Time Advantages:</text>
+  <text x="620" y="780" font-size="12" fill="#2d3748">• Sub-second message delivery</text>
+  <text x="620" y="800" font-size="12" fill="#2d3748">• Reduced server load vs HTTP polling</text>
+  <text x="620" y="820" font-size="12" fill="#2d3748">• Persistent connection state</text>
+
+  <!-- Sample WebSocket Frames -->
+  <rect x="50" y="870" width="500" height="80" fill="#f0f4f8" stroke="#cbd5e0" stroke-width="2" rx="5"/>
+  <text x="70" y="885" font-size="12" font-weight="bold" fill="#1a365d">WebSocket Frame Example:</text>
+  <text x="90" y="905" font-size="10" fill="#2d3748" font-family="monospace">FIN:1, RSV:000, OPCODE:1 (text), MASK:1</text>
+  <text x="90" y="920" font-size="10" fill="#2d3748" font-family="monospace">Payload Length: 25, Masking Key: 0x12345678</text>
+  <text x="90" y="935" font-size="10" fill="#2d3748" font-family="monospace">Data: "Hello, real-time world!"</text>
+
+  <!-- TCP vs UDP Comparison -->
+  <rect x="580" y="870" width="500" height="80" fill="#f0f4f8" stroke="#cbd5e0" stroke-width="2" rx="5"/>
+  <text x="600" y="885" font-size="12" font-weight="bold" fill="#1a365d">Why TCP for WebSocket:</text>
+  <text x="620" y="905" font-size="12" fill="#2d3748">• Reliable delivery (no message loss)</text>
+  <text x="620" y="920" font-size="12" fill="#2d3748">• Ordered message delivery</text>
+  <text x="620" y="935" font-size="12" fill="#2d3748">• Flow control and congestion management</text>
+</svg>

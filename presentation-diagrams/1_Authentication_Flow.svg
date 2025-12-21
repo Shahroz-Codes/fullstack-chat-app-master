@@ -1,0 +1,103 @@
+<svg viewBox="0 0 1200 950" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="max-width: 1200px; max-height: 950px; overflow: auto;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2d3748" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="40" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a365d">Feature 1: Authentication &amp; User Management Flow</text>
+
+  <!-- Legend -->
+  <rect x="50" y="70" width="1100" height="50" fill="#f0f4f8" stroke="#cbd5e0" stroke-width="2" rx="5"/>
+  <text x="70" y="105" font-size="12" fill="#2d3748">User Registration → Password Hashing → JWT Token Generation → Profile Management</text>
+
+  <!-- Sequence Diagram Layout -->
+  <!-- Lifelines -->
+  <line x1="200" y1="150" x2="200" y2="750" stroke="#cbd5e0" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="150" x2="400" y2="750" stroke="#cbd5e0" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="600" y1="150" x2="600" y2="750" stroke="#cbd5e0" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="800" y1="150" x2="800" y2="750" stroke="#cbd5e0" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="1000" y1="150" x2="1000" y2="750" stroke="#cbd5e0" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Component Boxes -->
+  <rect x="150" y="120" width="100" height="60" fill="#4299e1" stroke="#2b6cb0" stroke-width="3" rx="8"/>
+  <text x="200" y="155" font-size="14" font-weight="bold" text-anchor="middle" fill="white">User</text>
+
+  <rect x="350" y="120" width="100" height="60" fill="#48bb78" stroke="#22543d" stroke-width="3" rx="8"/>
+  <text x="400" y="155" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Frontend</text>
+
+  <rect x="550" y="120" width="100" height="60" fill="#ed8936" stroke="#7c2d12" stroke-width="3" rx="8"/>
+  <text x="600" y="155" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Backend</text>
+
+  <rect x="750" y="120" width="100" height="60" fill="#9f7aea" stroke="#44337a" stroke-width="3" rx="8"/>
+  <text x="800" y="155" font-size="14" font-weight="bold" text-anchor="middle" fill="white">MongoDB</text>
+
+  <rect x="950" y="120" width="100" height="60" fill="#e53e3e" stroke="#9b2c2c" stroke-width="3" rx="8"/>
+  <text x="1000" y="155" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Socket.io</text>
+
+  <!-- Sequence Flow -->
+  <!-- Step 1: User fills signup form -->
+  <line x1="200" y1="200" x2="400" y2="200" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="270" y="180" width="160" height="35" fill="#e6fffa" stroke="#0f766e" stroke-width="2" rx="5"/>
+  <text x="350" y="202" font-size="12" text-anchor="middle" fill="#0f766e" font-weight="bold">1. Fill Signup Form</text>
+
+  <!-- Step 2: Frontend validates and hashes -->
+  <line x1="400" y1="240" x2="600" y2="240" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="460" y="220" width="180" height="35" fill="#fed7d7" stroke="#742a2a" stroke-width="2" rx="5"/>
+  <text x="550" y="242" font-size="12" text-anchor="middle" fill="#742a2a" font-weight="bold">2. Validate &amp; Hash Password</text>
+
+  <!-- Step 3: Backend saves to database -->
+  <line x1="600" y1="280" x2="800" y2="280" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="660" y="260" width="140" height="35" fill="#fef3c7" stroke="#92400e" stroke-width="2" rx="5"/>
+  <text x="730" y="282" font-size="12" text-anchor="middle" fill="#92400e" font-weight="bold">3. Save User to DB</text>
+
+  <!-- Step 4: Backend generates JWT -->
+  <rect x="550" y="340" width="100" height="35" fill="#c6f6d5" stroke="#22543d" stroke-width="2" rx="5"/>
+  <text x="600" y="362" font-size="12" text-anchor="middle" fill="#22543d" font-weight="bold">4. Generate JWT</text>
+
+  <!-- Step 5: Backend returns user data -->
+  <line x1="600" y1="395" x2="400" y2="395" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="460" y="375" width="140" height="35" fill="#bee3f8" stroke="#2c5282" stroke-width="2" rx="5"/>
+  <text x="530" y="397" font-size="12" text-anchor="middle" fill="#2c5282" font-weight="bold">5. Return User Data</text>
+
+  <!-- Step 6: Frontend stores in cookies -->
+  <rect x="350" y="435" width="100" height="35" fill="#fae8ff" stroke="#581c87" stroke-width="2" rx="5"/>
+  <text x="400" y="457" font-size="12" text-anchor="middle" fill="#581c87" font-weight="bold">6. Store Cookies</text>
+
+  <!-- Step 7: Frontend updates Zustand state -->
+  <rect x="350" y="495" width="100" height="35" fill="#fef3c7" stroke="#92400e" stroke-width="2" rx="5"/>
+  <text x="400" y="517" font-size="12" text-anchor="middle" fill="#92400e" font-weight="bold">7. Update Zustand</text>
+
+  <!-- Step 8: Frontend connects to Socket.io -->
+  <line x1="400" y1="550" x2="1000" y2="550" stroke="#2d3748" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="650" y="530" width="180" height="35" fill="#c6f6d5" stroke="#22543d" stroke-width="2" rx="5"/>
+  <text x="740" y="552" font-size="12" text-anchor="middle" fill="#22543d" font-weight="bold">8. Establish Socket Connection</text>
+
+  <!-- Security Notes -->
+  <rect x="50" y="650" width="1100" height="200" fill="#f7fafc" stroke="#2d3748" stroke-width="2" rx="5"/>
+  <text x="70" y="680" font-size="16" font-weight="bold" fill="#1a365d">🔒 Security Implementation Details</text>
+
+  <text x="90" y="710" font-size="13" fill="#2d3748" font-weight="bold">Password Security:</text>
+  <text x="110" y="730" font-size="12" fill="#2d3748">• bcryptjs hashing with 10 salt rounds</text>
+  <text x="110" y="750" font-size="12" fill="#2d3748">• Industry-standard password protection</text>
+
+  <text x="90" y="775" font-size="13" fill="#2d3748" font-weight="bold">JWT Authentication:</text>
+  <text x="110" y="795" font-size="12" fill="#2d3748">• Secure tokens stored in HttpOnly cookies</text>
+  <text x="110" y="815" font-size="12" fill="#2d3748">• Automatic session restoration on app reload</text>
+
+  <text x="600" y="710" font-size="13" fill="#2d3748" font-weight="bold">Route Protection:</text>
+  <text x="620" y="730" font-size="12" fill="#2d3748">• Middleware validates JWT on protected endpoints</text>
+  <text x="620" y="750" font-size="12" fill="#2d3748">• Unauthorized access automatically blocked</text>
+
+  <text x="600" y="775" font-size="13" fill="#2d3748" font-weight="bold">Real-time Security:</text>
+  <text x="620" y="795" font-size="12" fill="#2d3748">• Socket.io connections authenticated with JWT</text>
+  <text x="620" y="815" font-size="12" fill="#2d3748">• User-specific message channels secured</text>
+
+  <!-- Process Labels -->
+  <text x="200" y="780" font-size="10" text-anchor="middle" fill="#666">Client</text>
+  <text x="400" y="780" font-size="10" text-anchor="middle" fill="#666">React App</text>
+  <text x="600" y="780" font-size="10" text-anchor="middle" fill="#666">Node.js API</text>
+  <text x="800" y="780" font-size="10" text-anchor="middle" fill="#666">Database</text>
+  <text x="1000" y="780" font-size="10" text-anchor="middle" fill="#666">Real-time</text>
+</svg>

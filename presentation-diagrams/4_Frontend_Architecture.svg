@@ -1,0 +1,151 @@
+<svg viewBox="0 0 1200 950" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="max-width: 1200px; max-height: 950px; overflow: auto;">
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ff6b6b" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="40" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a365d">Feature 4: Frontend Architecture &amp; State Management</text>
+
+  <!-- Legend -->
+  <rect x="50" y="70" width="1100" height="50" fill="#f0f4f8" stroke="#cbd5e0" stroke-width="2" rx="5"/>
+  <text x="70" y="105" font-size="12" fill="#2d3748">React Components → Zustand Store → Socket.io Integration → Real-Time UI Updates</text>
+
+  <!-- ZUSTAND STORE Section -->
+  <text x="60" y="160" font-size="18" font-weight="bold" fill="#1a365d">Global State Management (Zustand)</text>
+
+  <!-- useAuthStore -->
+  <rect x="60" y="180" width="340" height="280" fill="#e6f4ff" stroke="#1890ff" stroke-width="3" rx="8"/>
+  <text x="230" y="210" font-size="13" font-weight="bold" text-anchor="middle" fill="#0050b3">useAuthStore</text>
+
+  <!-- State -->
+  <rect x="80" y="230" width="300" height="70" fill="#91d5ff" stroke="#1890ff" stroke-width="1" rx="4"/>
+  <text x="90" y="250" font-size="10" fill="#003c8c" font-weight="bold">State:</text>
+  <text x="100" y="268" font-size="9" fill="#003c8c" font-family="monospace">authUser, isSigningUp, isLoggingIn,</text>
+  <text x="100" y="283" font-size="9" fill="#003c8c" font-family="monospace">isUpdatingProfile, onlineUsers, socket</text>
+
+  <!-- Methods -->
+  <rect x="80" y="310" width="300" height="150" fill="#b5e7ff" stroke="#1890ff" stroke-width="1" rx="4"/>
+  <text x="90" y="330" font-size="10" fill="#003c8c" font-weight="bold">Methods:</text>
+  <text x="100" y="350" font-size="9" fill="#003c8c" font-family="monospace">• checkAuth()</text>
+  <text x="100" y="365" font-size="9" fill="#003c8c" font-family="monospace">• signup(data)</text>
+  <text x="100" y="380" font-size="9" fill="#003c8c" font-family="monospace">• login(data)</text>
+  <text x="100" y="395" font-size="9" fill="#003c8c" font-family="monospace">• logout()</text>
+  <text x="100" y="410" font-size="9" fill="#003c8c" font-family="monospace">• updateProfile(data)</text>
+  <text x="100" y="425" font-size="9" fill="#003c8c" font-family="monospace">• connectSocket()</text>
+  <text x="100" y="440" font-size="9" fill="#003c8c" font-family="monospace">• disconnectSocket()</text>
+
+  <!-- useChatStore -->
+  <rect x="430" y="180" width="340" height="280" fill="#f6e7ff" stroke="#b37feb" stroke-width="3" rx="8"/>
+  <text x="600" y="210" font-size="13" font-weight="bold" text-anchor="middle" fill="#531dab">useChatStore</text>
+
+  <!-- State -->
+  <rect x="450" y="230" width="300" height="70" fill="#d3adf7" stroke="#b37feb" stroke-width="1" rx="4"/>
+  <text x="460" y="250" font-size="10" fill="#44337a" font-weight="bold">State:</text>
+  <text x="470" y="268" font-size="9" fill="#44337a" font-family="monospace">messages[], users[],</text>
+  <text x="470" y="283" font-size="9" fill="#44337a" font-family="monospace">selectedUser, loading flags</text>
+
+  <!-- Methods -->
+  <rect x="450" y="310" width="300" height="150" fill="#ebd0ff" stroke="#b37feb" stroke-width="1" rx="4"/>
+  <text x="460" y="330" font-size="10" fill="#44337a" font-weight="bold">Methods:</text>
+  <text x="470" y="350" font-size="9" fill="#44337a" font-family="monospace">• getUsers()</text>
+  <text x="470" y="365" font-size="9" fill="#44337a" font-family="monospace">• getMessages(userId)</text>
+  <text x="470" y="380" font-size="9" fill="#44337a" font-family="monospace">• sendMessage(data)</text>
+  <text x="470" y="395" font-size="9" fill="#44337a" font-family="monospace">• subscribeToMessages()</text>
+  <text x="470" y="410" font-size="9" fill="#44337a" font-family="monospace">• unsubscribeFromMessages()</text>
+  <text x="470" y="425" font-size="9" fill="#44337a" font-family="monospace">• setSelectedUser(user)</text>
+
+  <!-- useThemeStore -->
+  <rect x="800" y="180" width="340" height="280" fill="#fff1f0" stroke="#ff4d4f" stroke-width="3" rx="8"/>
+  <text x="970" y="210" font-size="13" font-weight="bold" text-anchor="middle" fill="#c41d7f">useThemeStore</text>
+
+  <!-- State -->
+  <rect x="820" y="230" width="300" height="70" fill="#ffccc7" stroke="#ff4d4f" stroke-width="1" rx="4"/>
+  <text x="830" y="250" font-size="10" fill="#5c0a0a" font-weight="bold">State:</text>
+  <text x="840" y="268" font-size="9" fill="#5c0a0a" font-family="monospace">theme (light/dark)</text>
+  <text x="840" y="283" font-size="9" fill="#5c0a0a" font-family="monospace">toggleTheme()</text>
+
+  <!-- Methods -->
+  <rect x="820" y="310" width="300" height="150" fill="#ffada5" stroke="#ff4d4f" stroke-width="1" rx="4"/>
+  <text x="830" y="330" font-size="10" fill="#5c0a0a" font-weight="bold">Methods:</text>
+  <text x="840" y="350" font-size="9" fill="#5c0a0a" font-family="monospace">• toggleTheme()</text>
+  <text x="840" y="365" font-size="9" fill="#5c0a0a" font-family="monospace">• setTheme(theme)</text>
+  <text x="840" y="380" font-size="9" fill="#5c0a0a" font-family="monospace">• getTheme()</text>
+  <text x="830" y="420" font-size="9" fill="#5c0a0a" font-weight="bold">Persists to localStorage</text>
+
+  <!-- COMPONENT TREE Section -->
+  <text x="60" y="530" font-size="18" font-weight="bold" fill="#1a365d">Component Hierarchy</text>
+
+  <!-- Root -->
+  <rect x="500" y="560" width="150" height="40" fill="#fff9e6" stroke="#faad14" stroke-width="2" rx="5"/>
+  <text x="575" y="588" font-size="11" font-weight="bold" text-anchor="middle" fill="#ad6800">App.jsx (Root)</text>
+
+  <!-- Router -->
+  <rect x="450" y="630" width="250" height="40" fill="#f6e7ff" stroke="#b37feb" stroke-width="2" rx="5"/>
+  <text x="575" y="658" font-size="11" font-weight="bold" text-anchor="middle" fill="#531dab">React Router</text>
+
+  <!-- Routes -->
+  <!-- HomePage -->
+  <rect x="100" y="710" width="140" height="35" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5"/>
+  <text x="170" y="733" font-size="10" font-weight="bold" text-anchor="middle" fill="#0050b3">HomePage.jsx</text>
+
+  <!-- LoginPage -->
+  <rect x="290" y="710" width="140" height="35" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5"/>
+  <text x="360" y="733" font-size="10" font-weight="bold" text-anchor="middle" fill="#0050b3">LoginPage.jsx</text>
+
+  <!-- SignUpPage -->
+  <rect x="480" y="710" width="140" height="35" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5"/>
+  <text x="550" y="733" font-size="10" font-weight="bold" text-anchor="middle" fill="#0050b3">SignUpPage.jsx</text>
+
+  <!-- ProfilePage -->
+  <rect x="670" y="710" width="140" height="35" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5"/>
+  <text x="740" y="733" font-size="10" font-weight="bold" text-anchor="middle" fill="#0050b3">ProfilePage.jsx</text>
+
+  <!-- SettingsPage -->
+  <rect x="860" y="710" width="140" height="35" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5"/>
+  <text x="930" y="733" font-size="10" font-weight="bold" text-anchor="middle" fill="#0050b3">SettingsPage.jsx</text>
+
+  <!-- Lines from Router to Pages -->
+  <line x1="575" y1="670" x2="170" y2="710" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="575" y1="670" x2="360" y2="710" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="575" y1="670" x2="550" y2="710" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="575" y1="670" x2="740" y2="710" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="575" y1="670" x2="930" y2="710" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Main Components (inside HomePage) -->
+  <rect x="100" y="780" width="120" height="35" fill="#f6e7ff" stroke="#b37feb" stroke-width="1" rx="5"/>
+  <text x="160" y="803" font-size="9" text-anchor="middle" fill="#531dab">Navbar.jsx</text>
+
+  <rect x="250" y="780" width="120" height="35" fill="#f6e7ff" stroke="#b37feb" stroke-width="1" rx="5"/>
+  <text x="310" y="803" font-size="9" text-anchor="middle" fill="#531dab">Sidebar.jsx</text>
+
+  <rect x="400" y="780" width="120" height="35" fill="#f6e7ff" stroke="#b37feb" stroke-width="1" rx="5"/>
+  <text x="460" y="803" font-size="9" text-anchor="middle" fill="#531dab">ChatContainer.jsx</text>
+
+  <rect x="550" y="780" width="120" height="35" fill="#f6e7ff" stroke="#b37feb" stroke-width="1" rx="5"/>
+  <text x="610" y="803" font-size="9" text-anchor="middle" fill="#531dab">MessageInput.jsx</text>
+
+  <!-- Sub-components -->
+  <rect x="700" y="780" width="120" height="35" fill="#fff1f0" stroke="#ff4d4f" stroke-width="1" rx="5"/>
+  <text x="760" y="803" font-size="9" text-anchor="middle" fill="#c41d7f">ChatHeader.jsx</text>
+
+  <rect x="850" y="780" width="140" height="35" fill="#f6e7ff" stroke="#b37feb" stroke-width="1" rx="5"/>
+  <text x="920" y="803" font-size="9" text-anchor="middle" fill="#531dab">MessageSkeleton.jsx</text>
+
+  <!-- DATA FLOW Section -->
+  <text x="60" y="880" font-size="18" font-weight="bold" fill="#1a365d">Data Flow: Send Message Example</text>
+
+  <rect x="60" y="910" width="1100" height="120" fill="#f7fafc" stroke="#2d3748" stroke-width="2" rx="5"/>
+  <text x="90" y="935" font-size="11" fill="#2d3748">1. User types in MessageInput.jsx → onChange updates local state</text>
+  <text x="90" y="955" font-size="11" fill="#2d3748">2. User clicks Send → sendMessage() called from useChatStore</text>
+  <text x="90" y="975" font-size="11" fill="#2d3748">3. HTTP POST sent to backend with text &amp; image (if present)</text>
+  <text x="550" y="935" font-size="11" fill="#2d3748">4. Backend saves to MongoDB, uploads image to Cloudinary</text>
+  <text x="550" y="955" font-size="11" fill="#2d3748">5. Socket.io emits "newMessage" event to receiver if online</text>
+  <text x="550" y="975" font-size="11" fill="#2d3748">6. Frontend subscribeToMessages() listener catches event, updates Zustand messages[]</text>
+
+  <!-- Connection lines from stores to App -->
+  <line x1="230" y1="460" x2="575" y2="560" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowRed)"/>
+  <line x1="600" y1="460" x2="575" y2="560" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowRed)"/>
+  <line x1="970" y1="460" x2="575" y2="560" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowRed)"/>
+</svg>
