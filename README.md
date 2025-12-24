@@ -39,8 +39,7 @@ npm start
 
 ```shell
 cd frontend
-npm run dev
-```
+npx vite --host```
 
 ## 🌐 LAN/Network Access Setup
 
