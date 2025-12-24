@@ -12,15 +12,15 @@ Highlights:
 ### Setup .env file
 
 ```js
-MONGODB_URI=...
+MONGODB_URI=mongodb+srv://shah125roz_db_user:W67gclLudQvohv56@cluster0.8a42jed.mongodb.net/chat_db?appName=Cluster0
 PORT=5001
-JWT_SECRET=...
+JWT_SECRET=mysecret
 
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
+CLOUDINARY_CLOUD_NAME=dayajes8o
+CLOUDINARY_API_KEY=665847369657562
+CLOUDINARY_API_SECRET=QXFYb6K2L4HjSxFuUvhaLeTEBKQ
 
-NODE_ENV=development
+NODE_ENV=production
 ```
 
 ### Build the app
